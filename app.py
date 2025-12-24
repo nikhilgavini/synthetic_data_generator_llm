@@ -70,22 +70,22 @@ def build_app(tokenizer, model, cfg: ModelConfig):
           return json_text, None, None
         return json_text, df.head(5), csv_path
   
-        ## Link functionality to button
-        generate_button.click(
-            fn = on_generate,
-            inputs = [description, schema, num_rows],
-            outputs = [json_output, df_output, download_file]
-        )
+      ## Link functionality to button
+      generate_button.click(
+          fn = on_generate,
+          inputs = [description, schema, num_rows],
+          outputs = [json_output, df_output, download_file]
+      )
   
-        ## Examples for user to pick from
-        gr.Examples(
-            examples = [
-                NFL_EXAMPLE,
-                NBA_EXAMPLE,
-                STOCK_EXAMPLE
-            ],
-            inputs = [description, schema, num_rows]
-        )
+      ## Examples for user to pick from
+      gr.Examples(
+          examples = [
+              NFL_EXAMPLE,
+              NBA_EXAMPLE,
+              STOCK_EXAMPLE
+          ],
+          inputs = [description, schema, num_rows]
+      )
   
     return demo
 
