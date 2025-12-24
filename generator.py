@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from huggingface_hub import login
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
-from prompts import system_prompt, repair_prompt
+from prompts import SYSTEM_PROMPT, REPAIR_PROMPT
 
 
 @dataclass
@@ -182,7 +182,7 @@ Return ONLY a JSON array of {num_rows} objects.
         # Stateless messages per generation (so we don't overload memory)
         # We don't need to maintain the state since dataset generation should be stateless
         messages = [
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt},
         ]
 
