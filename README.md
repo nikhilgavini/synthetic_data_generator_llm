@@ -54,6 +54,14 @@ readmitted_30d:bool
 
 ---
 
+## Screenshots of UI
+<img width="1508" height="713" alt="image" src="https://github.com/user-attachments/assets/2af45327-bf2c-4ee5-867e-a977d3104f7f" />
+<img width="1508" height="713" alt="image" src="https://github.com/user-attachments/assets/5f3837f0-61a8-4d48-a427-0725517340fa" />
+<img width="1508" height="713" alt="image" src="https://github.com/user-attachments/assets/af546a35-1ba6-4ef8-a31a-62c5bb60a73d" />
+
+
+---
+
 ## Known Limitations
 - Small row counts
 - LLM output can be malformed
