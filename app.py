@@ -53,40 +53,40 @@ def build_app(tokenizer, model, cfg: ModelConfig):
           label = "Number of rows",
       )
 
-    ## Button will have functionality linked to it
-    generate_button = gr.Button("Generate")
-
-    ## Outputs (JSON, DataFrame Preview, CSV Download)
-    json_output = gr.JSON(label="JSON Output")
-    df_output = gr.Dataframe(label="Preview (up to 5 rows)")
-    download_file = gr.File(label="Download CSV")
-
-    ## Generate the data in all forms
-    def on_generate(desc, sch, nr):
-      json_text, df, csv_path = generate_dataset_json(
-          desc, sch, int(nr), tokenizer, model, cfg
-      )
-      if df is None:
-        return json_text, None, None
-      return json_text, df.head(5), csv_path
-
-      ## Link functionality to button
-      generate_button.click(
-          fn = on_generate,
-          inputs = [description, schema, num_rows],
-          outputs = [json_output, df_output, download_file]
-      )
-
-      ## Examples for user to pick from
-      gr.Examples(
-          examples = [
-              NFL_EXAMPLE,
-              NBA_EXAMPLE,
-              STOCK_EXAMPLE
-          ],
-          inputs = [description, schema, num_rows]
-      )
-
+      ## Button will have functionality linked to it
+      generate_button = gr.Button("Generate")
+  
+      ## Outputs (JSON, DataFrame Preview, CSV Download)
+      json_output = gr.JSON(label="JSON Output")
+      df_output = gr.Dataframe(label="Preview (up to 5 rows)")
+      download_file = gr.File(label="Download CSV")
+  
+      ## Generate the data in all forms
+      def on_generate(desc, sch, nr):
+        json_text, df, csv_path = generate_dataset_json(
+            desc, sch, int(nr), tokenizer, model, cfg
+        )
+        if df is None:
+          return json_text, None, None
+        return json_text, df.head(5), csv_path
+  
+        ## Link functionality to button
+        generate_button.click(
+            fn = on_generate,
+            inputs = [description, schema, num_rows],
+            outputs = [json_output, df_output, download_file]
+        )
+  
+        ## Examples for user to pick from
+        gr.Examples(
+            examples = [
+                NFL_EXAMPLE,
+                NBA_EXAMPLE,
+                STOCK_EXAMPLE
+            ],
+            inputs = [description, schema, num_rows]
+        )
+  
     return demo
 
 
