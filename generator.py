@@ -15,7 +15,7 @@ from prompts import SYSTEM_PROMPT, REPAIR_PROMPT
 
 @dataclass
 class ModelConfig:
-    model_id: str = os.getenv("MODEL_ID", "meta-llama/Meta-Llama-3-8B-Instruct")
+    model_id: str = os.getenv("MODEL_ID", "meta-llama/Llama-3.2-3B-Instruct")
     max_new_tokens: int = 1024
     do_sample: bool = True
     temperature: float = 0.7
