@@ -1,4 +1,4 @@
-system_prompt = """You are an accurate synthetic data generator.
+SYSTEM_PROMPT = """You are an accurate synthetic data generator.
 Your sole task is to output valid data in the format specified by the user.
 
 Hard rules:
@@ -16,7 +16,7 @@ The user will provide:
 Return ONLY the JSON array.
 """
 
-repair_prompt = """You are a JSON repair tool.
+REPAIR_PROMPT = """You are a JSON repair tool.
 
 Task:
 - You will be given text that should be a JSON array (list of objects), but it may be invalid JSON.
