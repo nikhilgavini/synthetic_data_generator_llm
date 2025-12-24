@@ -50,3 +50,13 @@ sex:str
 ef_percent:int
 creatinine:float
 readmitted_30d:bool
+```
+
+---
+
+## Known Limitations
+- Small row counts
+- LLM output can be malformed
+  - This is why we have a repair step call to an LLM
+- Type checking is minimal
+- Not production hardened
