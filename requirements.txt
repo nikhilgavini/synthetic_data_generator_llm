@@ -1,0 +1,8 @@
+gradio
+pandas
+torch
+transformers
+accelerate
+bitsandbytes
+huggingface_hub
+python-dotenv
