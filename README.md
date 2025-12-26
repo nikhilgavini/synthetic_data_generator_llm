@@ -5,17 +5,17 @@ Generate small synthetic datasets from a plain-English description + an explicit
 - **CSV download**
 - **Data preview** in a Gradio UI
 
-This project was built as part of an “open-source GenAI” learning track and is intentionally kept lightweight (not production-hardened).
+This project was built as an augmentation to an “open-source GenAI” learning track and is intentionally kept lightweight (not production-hardened).
 
 ---
 
 ## Why this exists
 
 Synthetic data is useful when:
-- real data is **scarce** or **expensive** to label
-- data is **sensitive** (privacy / compliance)
-- you want to **prototype** ML pipelines quickly
-- you need **test fixtures** for downstream systems
+- Real data is **scarce** or **expensive** to label
+- Data is **sensitive** (privacy / compliance)
+- You want to **prototype** ML pipelines quickly
+- You need **test fixtures** for downstream systems
 
 This tool demonstrates a practical workflow:
 **schema → prompt → generation → JSON validation/repair → CSV artifact**
@@ -58,7 +58,6 @@ readmitted_30d:bool
 <img width="1508" height="713" alt="image" src="https://github.com/user-attachments/assets/2af45327-bf2c-4ee5-867e-a977d3104f7f" />
 <img width="1508" height="713" alt="image" src="https://github.com/user-attachments/assets/5f3837f0-61a8-4d48-a427-0725517340fa" />
 <img width="1508" height="713" alt="image" src="https://github.com/user-attachments/assets/af546a35-1ba6-4ef8-a31a-62c5bb60a73d" />
-
 
 ---
 
